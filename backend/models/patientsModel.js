@@ -43,8 +43,7 @@ const patientsSchema = mongoose.Schema({
         required: [true, 'Please enter your medical history']
     },
     allergies: {
-        type: String,
-        required: [true, 'Please enter any allergies']
+        type: String
     }
 },{
     timeStamps: true
