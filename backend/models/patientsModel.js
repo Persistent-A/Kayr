@@ -31,7 +31,7 @@ const patientsSchema = mongoose.Schema({
         required: [true, 'Please enter your email']
     },
     address: {
-        type: String,
+        type: Object,
         required: [true, 'Please enter your address']
     },
     marital_status: {
@@ -39,11 +39,11 @@ const patientsSchema = mongoose.Schema({
         required: [true, 'Please enter your address']
     },
     past_medical_history: {
-        type: String,
+        type: Array,
         required: [true, 'Please enter your medical history']
     },
     allergies: {
-        type: String
+        type: Array
     }
 },{
     timeStamps: true
