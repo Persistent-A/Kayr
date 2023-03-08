@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const patientsSchema = mongoose.Schema({
+const relativesSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
@@ -49,4 +49,4 @@ const patientsSchema = mongoose.Schema({
     timeStamps: true
 })
 
-module.exports = mongoose.model('Patients', patientsSchema)
+module.exports = mongoose.model('Relatives', relativesSchema)

@@ -11,7 +11,7 @@ const userSchema = mongoose.Schema({
         required: [true, 'Please enter your last name']
     },
     age: {
-        type: Int32,
+        type: Number,
     },
     gender: {
         type: String,

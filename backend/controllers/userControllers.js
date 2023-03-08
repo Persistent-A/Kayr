@@ -1,6 +1,6 @@
 const asyncHandler = require('express-async-handler')
 const Users = require('../models/userModel') 
-const Patients = require('../models/patientsModel')
+const Patients = require('../models/relativesModel')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
@@ -71,39 +71,6 @@ const loginUser = asyncHandler(async(req, res) => {
     }
 })
 
-const registerPatient = async(req, res) => {
-    const {first_name, 
-        last_name, 
-        date_of_birth, 
-        gender, 
-        phone, 
-        email, 
-        address, 
-        marital_status, 
-        past_medical_history, 
-        allergies} = req.body
-
-    if(!first_name || !last_name || !date_of_birth || !gender || !phone || !email || !address || !marital_status || !past_medical_history || !allergies){
-        res.status(400)
-        throw new Error ("Please fill all the fields")
-    }
-
-    await Patients.create({
-        user: req.user._id,
-        first_name, 
-        last_name, 
-        date_of_birth, 
-        gender, 
-        phone, 
-        email, 
-        address, 
-        marital_status, 
-        past_medical_history, 
-        allergies
-    })
-
-}
-
 const generateToken = async(id) => {
     return await jwt.sign({id}, process.env.JWT_SECRET, {
         expiresIn: '30d'
@@ -111,4 +78,4 @@ const generateToken = async(id) => {
 }
 
 
-module.exports = {registerUser, loginUser, registerPatient};
+module.exports = {registerUser, loginUser};
