@@ -56,4 +56,4 @@ const healthProfessionalsSchema = mongoose.Schema({
     timestamp: true
 })
 
-module.exports = mongoose.model('healthProfessionals', healthProfessionalsSchema)
+module.exports = mongoose.model('HealthProfessionals', healthProfessionalsSchema)
