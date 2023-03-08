@@ -16,4 +16,4 @@ const appointmentsSchema = mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('Appointment', appointmentsSchema)
+module.exports = mongoose.model('Appointments', appointmentsSchema)

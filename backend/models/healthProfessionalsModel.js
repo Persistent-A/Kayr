@@ -44,7 +44,7 @@ const healthProfessionalsSchema = mongoose.Schema({
         type: Boolean
     },
     age: {
-        type: Int32
+        type: Number
     }
 },
 {

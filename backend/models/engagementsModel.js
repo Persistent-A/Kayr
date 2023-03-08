@@ -6,15 +6,15 @@ const engagementSchema = mongoose.Schema({
         required: [true, "Cant map User with engagements"],
         ref: "Users"
     },
-    patient_id: {
+    relative_id: {
         type: mongoose.Schema.Types.ObjectId,
         required: [true, "Cant map relative with engagements"],
-        ref: "Patients"
+        ref: "Relatives"
     },
     appointment_id: {
         type: mongoose.Schema.Types.ObjectId,
         required: [true, "Cant map appointment with engagements"],
-        ref: "Patients"
+        ref: "Appointments"
     },
     health_pro_id: {
         type: mongoose.Schema.Types.ObjectId,
