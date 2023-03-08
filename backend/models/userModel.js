@@ -1,3 +1,4 @@
+const { Int32 } = require('bson')
 const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema({
@@ -10,7 +11,7 @@ const userSchema = mongoose.Schema({
         required: [true, 'Please enter your last name']
     },
     age: {
-        type: String,
+        type: Int32,
     },
     gender: {
         type: String,
@@ -28,7 +29,7 @@ const userSchema = mongoose.Schema({
         required: [true, 'Please enter your password']
     },
     address: {
-        type: String,
+        type: Object,
     }
 },
 {

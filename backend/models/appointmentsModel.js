@@ -10,7 +10,7 @@ const appointmentsSchema = mongoose.Schema({
     appointment_end_time:{
         type: Date
     },
-    isRejected_appointment:{
+    isApproved_appointment:{
         type: Boolean
     }
 

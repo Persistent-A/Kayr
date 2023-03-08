@@ -1,3 +1,4 @@
+const { Int32 } = require('bson')
 const mongoose = require('mongoose')
 
 const healthProfessionalsSchema = mongoose.Schema({
@@ -25,13 +26,13 @@ const healthProfessionalsSchema = mongoose.Schema({
         type: String
     },
     address: {
-        type: String
+        type: Object
     },
     specialization: {
-        type: String
+        type: Array
     },
     language: {
-        type: String
+        type: Array
     },
     availability: {
         type: String
@@ -42,15 +43,9 @@ const healthProfessionalsSchema = mongoose.Schema({
     isApproved: {
         type: Boolean
     },
-    reviews_by_patients: {
-        type: String
-    },
     age: {
-        type: String
-    },
-    ratings: {
-        type: String
-    },
+        type: Int32
+    }
 },
 {
     timestamp: true
